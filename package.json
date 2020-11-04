@@ -1,0 +1,22 @@
+{
+  "name": "trails",
+  "version": "1.0.0",
+  "description": "trails database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bleong7818/Placeholder.git"
+  },
+  "author": "Brandon Leong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bleong7818/Placeholder/issues"
+  },
+  "homepage": "https://github.com/bleong7818/Placeholder#readme",
+  "dependencies": {
+    "http": "0.0.1-security"
+  }
+}
