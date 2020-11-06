@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="entire-page">
 
 <head>
     <meta charset="utf-8" />
     <title>Javascript</title>
+    <script src="src/bundle.js"></script>
+    <link rel="stylesheet" href="css-stuff/reset.css" type="text/css">
+    <link rel="stylesheet" href="css-stuff/pics.css" type="text/css">
+    <link rel="stylesheet" href="css-stuff/body.css" type="text/css">
+    <link rel="stylesheet" href="css-stuff/main-page.css" type="text/css">
 </head>
-
-    <body>
-        <div id="app">
-
+<div class="entire-page">
+    <body class="game-data">
+        <h1 class="cover-words">Raw(g) Data </h1>
+        <h1 class="cover-description">A visualization of user and critical data from Rawg.io</h1>
+        <div class="filter-buttons">
+            <button id="popularity">Filter by Popularity</button>
+            <button id="metacritic">Filter by Metacritic Score</button>
         </div>
+        <ul id="games-list">
+        </ul>
     </body>
-    <script src="testing.js"></script>
+</div>
 
 </html>

@@ -1,0 +1,45 @@
+.cover-words {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 54px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.cover-description {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px;
+}
+
+#games-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game {
+    padding: 10px;
+    color: #ffffff;
+}
+
+.game-data {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* #games-list:nth-child(4) {
+
+} */
