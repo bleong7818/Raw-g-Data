@@ -1,4 +1,5 @@
 export const fetchAddedData = (number) => {
+    // debugger;
     fetch(`https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=${number}-01-01,${number}-12-31&ordering=-added/`)
         .then(res => {
             if (!res.ok) {
@@ -18,15 +19,15 @@ export const fetchAddedData = (number) => {
             // }
             const games = data.results.map(game => {
                 return `
-            <div class="game" style="height:${game.added / 35}px; width:${game.added / 35}px">
+            <li class="game" style="height:${game.added / 35}px; width:${game.added / 35}px">
                 <p> <img style="height:${game.added / 50}px; width:${game.added / 50}px" src="${game.background_image}" alt=${game.name}/> </p>
                 <p> Title: ${game.name} </p>
                 <p> Added by ${game.added} users </p>
-            </div>
+            </li>
             `
             }).join('');
             document.getElementById('games-list')
-                .insertAdjacentHTML("afterbegin", games);
+                .insertInnerHTML("afterbegin", games);
         }).catch(err => {
             console.log(err);
         });
@@ -58,7 +59,7 @@ export const fetchMetacriticData = (number) => {
             `
             }).join('')
             document.getElementById('games-list')
-                .insertAdjacentHTML("afterbegin", games)
+                .insertInnerHTML("afterbegin", games)
         }).catch(err => {
             console.log(err)
         })
