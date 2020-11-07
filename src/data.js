@@ -1,5 +1,6 @@
 export const fetchAddedData = (number) => {
     // debugger;
+    // console.log('here')
     fetch(`https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=${number}-01-01,${number}-12-31&ordering=-added/`)
         .then(res => {
             if (!res.ok) {
@@ -7,7 +8,8 @@ export const fetchAddedData = (number) => {
             }
             return res.json();
         }).then(data => {
-            console.log(data);
+            // debugger;
+            // console.log(data);
             const half = data.results.splice(15, 19);
             // debugger;
             // const sorted 
@@ -27,7 +29,7 @@ export const fetchAddedData = (number) => {
             `
             }).join('');
             document.getElementById('games-list')
-                .insertInnerHTML("afterbegin", games);
+                .insertAdjacentHTML("afterbegin", games);
         }).catch(err => {
             console.log(err);
         });
@@ -59,7 +61,7 @@ export const fetchMetacriticData = (number) => {
             `
             }).join('')
             document.getElementById('games-list')
-                .insertInnerHTML("afterbegin", games)
+                .insertAdjacentHTML("afterbegin", games)
         }).catch(err => {
             console.log(err)
         })

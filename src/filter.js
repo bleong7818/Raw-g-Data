@@ -17,15 +17,13 @@ const buttonResult = () => {
         // debugger;
         // let list = document.getElementById('games-list')
         // list.innerHTML = "";
+        let list = document.getElementById("games-list")
+        while (list.lastChild) {
+            list.removeChild(list.lastChild);
+        }
         fetchMetacriticData(2015);
     });
 
-    const deletion = document.getElementById("delete-button");
-    deletion.onclick = () => {
-        // debugger;
-        const myNode = document.getElementById("games-list");
-        myNode.innerHTML = '';
-    }
 };
 
 export default buttonResult;
