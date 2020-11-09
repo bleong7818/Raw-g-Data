@@ -48,7 +48,7 @@ export const fetchMetacriticData = (number) => {
             let nineties = data.results.filter(game => game.metacritic >= 90);
             let eighties = data.results.filter(game => game.metacritic >= 80 && game.metacritic < 90);
             let seventies = data.results.filter(game => game.metacritic >= 70 && game.metacritic < 80);
-            debugger;
+            // debugger;
             // const games = sorted.map(game => {
             //     return `
             // <li class="game" style="height:${game.metacritic * 2.5}px; width:${game.metacritic * 3}px">
