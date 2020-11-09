@@ -11,14 +11,7 @@ export const fetchAddedData = (number) => {
             // debugger;
             // console.log(data);
             const half = data.results.splice(15, 19);
-            // debugger;
-            // const sorted 
-            // debugger;
-            // if (truth) {
-            //     const sorted = data.results.sort((a, b) => {
-            //         return (a.metacritic < b.metacritic) ? 1 : -1
-            //     })
-            // }
+            
             const games = data.results.map(game => {
                 return `
             <li class="game" style="height:${game.added / 35}px; width:${game.added / 35}px">
