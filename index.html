@@ -13,11 +13,13 @@
 <div class="entire-page">
     <body class="game-data">
         <h1 class="cover-words">Raw(g) Data </h1>
-        <h1 class="cover-description">A visualization of user and critical data from Rawg.io</h1>
-        <div class="slide-main">
-            <input type="range" min="0" max="100" value="50" id="slider">
-            <div id="selector">
-                <div class=SelectBtn></div>
+        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io</h1>
+        <div class="slide-container">
+            <div class="slide-main">
+                <input type="range" min="0" max="100" value="50" id="slider">
+                <div id="selector">
+                    <div class=SelectBtn></div>
+                </div>
             </div>
         </div>
         <div class="filter-buttons">
@@ -26,6 +28,7 @@
             <!-- <button id="delete-button">Delete testing</button> -->
         </div>
         <ul id="games-list">
+
         </ul>
 
         <script>
