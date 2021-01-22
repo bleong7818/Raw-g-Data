@@ -4,23 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <title>Javascript</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script src="src/bundle.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css-stuff/reset.css" type="text/css">
     <link rel="stylesheet" href="css-stuff/pics.css" type="text/css">
     <link rel="stylesheet" href="css-stuff/body.css" type="text/css">
     <link rel="stylesheet" href="css-stuff/main-page.css" type="text/css">
+    <link rel="stylesheet" href="css-stuff/slider.css" type="text/css">
 </head>
 <div class="entire-page">
     <body class="game-data">
         <h1 class="cover-words">Raw(g) Data </h1>
-        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io</h1>
-        <div class="slide-container">
-            <div class="slide-main">
-                <input type="range" min="0" max="100" value="50" id="slider">
-                <div id="selector">
-                    <div class=SelectBtn></div>
+        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io (slider will allow user to pick the year for the list of games. List is currently defaulted to the year of 2013)</h1>
+        <div class="range-input">
+                <input type="range" min="2010" max="2020" value="2010" step="1">
+                <div class="value">
+                    <div></div>
                 </div>
-            </div>
         </div>
         <div class="filter-buttons">
             <button id="popularity">Filter by Popularity</button>
@@ -28,17 +29,16 @@
             <!-- <button id="delete-button">Delete testing</button> -->
         </div>
         <ul id="games-list">
-
         </ul>
 
-        <script>
+        <!-- <script>
             var slide = document.getElementById('slider')
             var selector = document.getElementById('selector')
 
             slider.oninput = function() {
                 selector.style.left = this.value + "%"
             }
-        </script>
+        </script> -->
         <!-- <h1 class="testing">testing</h1> -->
     </body>
 </div>

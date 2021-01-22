@@ -9,14 +9,14 @@ export const fetchAddedData = (number) => {
             return res.json();
         }).then(data => {
             // debugger;
-            // console.log(data);
+            console.log(data);
             const half = data.results.splice(15, 19);
             
             const games = data.results.map(game => {
                 return `
-            <li class="game" style="height:${game.added / 40}px; width:${game.added / 30}px">
-                <p class="image"> <img style="height:${game.added / 50}px; width:${game.added / 40}px" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class ="game-text"> Title: ${game.name} </p>
+            <li class="game" style="height:${game.added / 35}px; width:${game.added / 30}px">
+                <p class="image"> <img style="height:${game.added / 40}px; width:${game.added / 30}px" src="${game.background_image}" alt=${game.name}/> </p>
+                <p class ="game-text"> ${game.name} </p>
                 <p class ="game-text"> Added by ${game.added} users </p>
             </li>
             `
@@ -32,9 +32,9 @@ export const fetchMetacriticData = (number) => {
     fetch(`https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=${number}-01-01,${number}-12-31&ordering=-added/`)
         .then(res => {
             if (!res.ok) {
-                throw Error("ERROR")
+                throw Error("ERROR");
             }
-            return res.json()
+            return res.json();
         }).then(data => {
             let half = data.results.splice(15, 19);
             // debugger;
@@ -48,7 +48,7 @@ export const fetchMetacriticData = (number) => {
             let nineties = data.results.filter(game => game.metacritic >= 90);
             let eighties = data.results.filter(game => game.metacritic >= 80 && game.metacritic < 90);
             let seventies = data.results.filter(game => game.metacritic >= 70 && game.metacritic < 80);
-            debugger;
+            // debugger;
             // const games = sorted.map(game => {
             //     return `
             // <li class="game" style="height:${game.metacritic * 2.5}px; width:${game.metacritic * 3}px">
@@ -63,7 +63,7 @@ export const fetchMetacriticData = (number) => {
                 return `
             <li class="nineties-game">
                 <p> <img class="nineties-image" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class="nineties-title">  Title: ${game.name} </p>
+                <p class="nineties-title">${game.name}</p>
                 <p class="nineties-title"> Metacritic score: ${game.metacritic} </p>
             </li>
             `
@@ -73,7 +73,7 @@ export const fetchMetacriticData = (number) => {
                 return `
             <li class="eighties-game" >
                 <p> <img class="eighties-image" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class="eighties-title">  Title: ${game.name} </p>
+                <p class="eighties-title"> ${game.name} </p>
                 <p class="eighties-title"> Metacritic score: ${game.metacritic} </p>
             </li>
             `
@@ -83,7 +83,7 @@ export const fetchMetacriticData = (number) => {
                 return `
             <li class="seventies-game" >
                 <p > <img class="seventies-image" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class="seventies-title"> Title: ${game.name} </p>
+                <p class="seventies-title"> ${game.name} </p>
                 <p class="seventies-title"> Metacritic score: ${game.metacritic} </p>
             </li>
             `
@@ -96,11 +96,8 @@ export const fetchMetacriticData = (number) => {
 
             document.getElementById('games-list')
                 .insertAdjacentHTML("afterbegin", ninetiesGames);
-            
-
-            
         }).catch(err => {
-            console.log(err)
+            console.log(err);
         });
 };
 

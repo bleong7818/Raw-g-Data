@@ -1,9 +1,11 @@
-import { fetchAddedData, fetchMetacriticData } from './data'
+import { fetchAddedData, fetchMetacriticData } from './data';
+
+
 
 const buttonResult = () => {
-    const popularity = document.getElementById("popularity")
+    const popularity = document.getElementById("popularity");
     popularity.addEventListener("click", e => {
-        let list = document.getElementById("games-list")
+        let list = document.getElementById("games-list");
         while (list.lastChild) {
             list.removeChild(list.lastChild);
         }
@@ -11,13 +13,13 @@ const buttonResult = () => {
         // location.reload();
     });
 
-    const critical = document.getElementById("metacritic")
+    const critical = document.getElementById("metacritic");
     critical.addEventListener("click", e => {
         // location.reload();
         // debugger;
         // let list = document.getElementById('games-list')
         // list.innerHTML = "";
-        let list = document.getElementById("games-list")
+        let list = document.getElementById("games-list");
         while (list.lastChild) {
             list.removeChild(list.lastChild);
         }
