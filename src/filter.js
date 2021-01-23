@@ -1,7 +1,5 @@
 import { fetchAddedData, fetchMetacriticData } from './data';
 
-
-
 const buttonResult = () => {
     const popularity = document.getElementById("popularity");
     popularity.addEventListener("click", e => {

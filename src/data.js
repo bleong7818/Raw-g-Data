@@ -1,32 +1,51 @@
 export const fetchAddedData = (number) => {
-    // debugger;
-    // console.log('here')
+    
     fetch(`https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=${number}-01-01,${number}-12-31&ordering=-added/`)
         .then(res => {
             if (!res.ok) {
                 throw Error("ERROR");
             }
             return res.json();
-        }).then(data => {
-            // debugger;
+        })
+
+        .then(data => {
+            
             console.log(data);
             const half = data.results.splice(15, 19);
-            
-            const games = data.results.map(game => {
-                return `
-            <li class="game" style="height:${game.added / 35}px; width:${game.added / 30}px">
-                <p class="image"> <img style="height:${game.added / 40}px; width:${game.added / 30}px" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class ="game-text"> ${game.name} </p>
-                <p class ="game-text"> Added by ${game.added} users </p>
-            </li>
-            `
-            }).join('');
-            document.getElementById('games-list')
-                .insertAdjacentHTML("afterbegin", games);
-        }).catch(err => {
-            console.log(err);
+            debugger
+            resultsArray = [];
+            data.results.forEach(game => {
+            // debugger
+               resultsArray.push(game.added);
+            });
+            debugger
         });
-}
+        // .then(data => {
+            
+        //     console.log(data);
+        //     const half = data.results.splice(15, 19);
+        //     // debugger
+        //     resultsArray = [];
+        //     data.results.forEach(game => {
+        //     // debugger
+        //        resultsArray.push(game.added);
+        //     });
+        //     // console.log(resultsArray);
+        //     const games = data.results.map(game => {
+        //         return `
+        //     <li class="game" style="height:${game.added / 35}px; width:${game.added / 30}px">
+        //         <p class="image"> <img style="height:${game.added / 40}px; width:${game.added / 30}px" src="${game.background_image}" alt=${game.name}/> </p>
+        //         <p class ="game-text"> ${game.name} </p>
+        //         <p class ="game-text"> Added by ${game.added} users </p>
+        //     </li>
+        //     `
+        //     }).join('');
+        //     document.getElementById('games-list')
+        //         .insertAdjacentHTML("afterbegin", games);
+        // }).catch(err => {
+        //     console.log(err);
+        // });
+};
 
 export const fetchMetacriticData = (number) => {
     fetch(`https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=${number}-01-01,${number}-12-31&ordering=-added/`)
@@ -43,7 +62,7 @@ export const fetchMetacriticData = (number) => {
             // if (truth) {
             let sorted = data.results.sort((a, b) => {
                     return (a.metacritic < b.metacritic) ? 1 : -1
-            })
+            });
 
             let nineties = data.results.filter(game => game.metacritic >= 90);
             let eighties = data.results.filter(game => game.metacritic >= 80 && game.metacritic < 90);
@@ -67,7 +86,7 @@ export const fetchMetacriticData = (number) => {
                 <p class="nineties-title"> Metacritic score: ${game.metacritic} </p>
             </li>
             `
-            }).join('')
+            }).join('');
 
             const eightiesGames = eighties.map(game => {
                 return `
@@ -77,7 +96,7 @@ export const fetchMetacriticData = (number) => {
                 <p class="eighties-title"> Metacritic score: ${game.metacritic} </p>
             </li>
             `
-            }).join('')
+            }).join('');
 
             const seventiesGames = seventies.map(game => {
                 return `
@@ -87,7 +106,7 @@ export const fetchMetacriticData = (number) => {
                 <p class="seventies-title"> Metacritic score: ${game.metacritic} </p>
             </li>
             `
-            }).join('')
+            }).join('');
             document.getElementById('games-list')
                 .insertAdjacentHTML("afterbegin", seventiesGames);
 
