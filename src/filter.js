@@ -7,7 +7,7 @@ const buttonResult = () => {
         while (list.lastChild) {
             list.removeChild(list.lastChild);
         }
-        fetchAddedData(2013);
+        fetchAddedData(2016);
         // location.reload();
     });
 
@@ -21,7 +21,7 @@ const buttonResult = () => {
         while (list.lastChild) {
             list.removeChild(list.lastChild);
         }
-        fetchMetacriticData(2013);
+        fetchMetacriticData(2016);
     });
 
 };

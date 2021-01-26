@@ -13,16 +13,11 @@ export const fetchAddedData = (number) => {
             // debugger
             let numbersArray = [];
             data.results.forEach(game => {
-            // debugger
                numbersArray.push(game.added);
             });
             let nameArray = [];
             data.results.forEach(game => {
                 nameArray.push(game.name);
-            });
-            let scoresArray = [];
-            data.results.forEach(game => {
-                scoresArray.push(game.metacritic);
             });
             // debugger;
             let myChart = document.getElementById('myChart').getContext('2d');
@@ -94,50 +89,89 @@ export const fetchMetacriticData = (number) => {
             let sorted = data.results.sort((a, b) => {
                     return (a.metacritic < b.metacritic) ? 1 : -1;
             });
+            // debugger;
+            let namesArray = []; 
+            sorted.forEach(game => {
+                namesArray.push(game.name);
+            });
+            let scoresArray = [];
+            sorted.forEach(game => {
+                scoresArray.push(game.metacritic);
+            });
+            // debugger;
+            let myChart = document.getElementById('myChart').getContext('2d');
+            let massPopChart = new Chart(myChart, {
+                type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
+                data: {
+                    labels: namesArray,
+                    datasets: [{
+                        label: 'Metacritic Score',
+                        data: scoresArray,
+                        backgroundColor: ['white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
+                            'white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',],
+                    }]
+                },
+                options: {}
+            });
+            const games =
+                `
+                <script>
+                    ${massPopChart}
+                </script>
+            `;
 
-            let nineties = data.results.filter(game => game.metacritic >= 90);
-            let eighties = data.results.filter(game => game.metacritic >= 80 && game.metacritic < 90);
-            let seventies = data.results.filter(game => game.metacritic >= 70 && game.metacritic < 80);
-
-            const ninetiesGames = nineties.map(game => {
-                return `
-            <li class="nineties-game">
-                <p> <img class="nineties-image" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class="nineties-title">${game.name}</p>
-                <p class="nineties-title"> Metacritic score: ${game.metacritic} </p>
-            </li>
-            `
-            }).join('');
-
-            const eightiesGames = eighties.map(game => {
-                return `
-            <li class="eighties-game" >
-                <p> <img class="eighties-image" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class="eighties-title"> ${game.name} </p>
-                <p class="eighties-title"> Metacritic score: ${game.metacritic} </p>
-            </li>
-            `
-            }).join('');
-
-            const seventiesGames = seventies.map(game => {
-                return `
-            <li class="seventies-game" >
-                <p > <img class="seventies-image" src="${game.background_image}" alt=${game.name}/> </p>
-                <p class="seventies-title"> ${game.name} </p>
-                <p class="seventies-title"> Metacritic score: ${game.metacritic} </p>
-            </li>
-            `
-            }).join('');
-            document.getElementById('games-list')
-                .insertAdjacentHTML("afterbegin", seventiesGames);
-
-            document.getElementById('games-list')
-                    .insertAdjacentHTML("afterbegin", eightiesGames);
-
-            document.getElementById('games-list')
-                .insertAdjacentHTML("afterbegin", ninetiesGames);
+            document.getElementById('testing-ground')
+                .insertAdjacentHTML("afterbegin", games);
         }).catch(err => {
             console.log(err);
+            // let scoresArray = [];
+            // sorted.results.forEach(game => {
+            //     scoresArray.push(game.metacritic);
+            // });
+
+        //     let nineties = data.results.filter(game => game.metacritic >= 90);
+        //     let eighties = data.results.filter(game => game.metacritic >= 80 && game.metacritic < 90);
+        //     let seventies = data.results.filter(game => game.metacritic >= 70 && game.metacritic < 80);
+
+        //     const ninetiesGames = nineties.map(game => {
+        //         return `
+        //     <li class="nineties-game">
+        //         <p> <img class="nineties-image" src="${game.background_image}" alt=${game.name}/> </p>
+        //         <p class="nineties-title">${game.name}</p>
+        //         <p class="nineties-title"> Metacritic score: ${game.metacritic} </p>
+        //     </li>
+        //     `
+        //     }).join('');
+
+        //     const eightiesGames = eighties.map(game => {
+        //         return `
+        //     <li class="eighties-game" >
+        //         <p> <img class="eighties-image" src="${game.background_image}" alt=${game.name}/> </p>
+        //         <p class="eighties-title"> ${game.name} </p>
+        //         <p class="eighties-title"> Metacritic score: ${game.metacritic} </p>
+        //     </li>
+        //     `
+        //     }).join('');
+
+        //     const seventiesGames = seventies.map(game => {
+        //         return `
+        //     <li class="seventies-game" >
+        //         <p > <img class="seventies-image" src="${game.background_image}" alt=${game.name}/> </p>
+        //         <p class="seventies-title"> ${game.name} </p>
+        //         <p class="seventies-title"> Metacritic score: ${game.metacritic} </p>
+        //     </li>
+        //     `
+        //     }).join('');
+        //     document.getElementById('games-list')
+        //         .insertAdjacentHTML("afterbegin", seventiesGames);
+
+        //     document.getElementById('games-list')
+        //             .insertAdjacentHTML("afterbegin", eightiesGames);
+
+        //     document.getElementById('games-list')
+        //         .insertAdjacentHTML("afterbegin", ninetiesGames);
+        // }).catch(err => {
+        //     console.log(err);
         });
 };
 
