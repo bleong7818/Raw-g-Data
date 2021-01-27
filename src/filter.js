@@ -3,9 +3,11 @@ import { fetchAddedData, fetchMetacriticData } from './data';
 const buttonResult = () => {
     const popularity = document.getElementById("popularity");
     popularity.addEventListener("click", e => {
+        let slider = document.getElementsByClassName('range-input');
+        debugger;
         // let list = document.getElementById("games-list");
         let testing = document.getElementById('testing-ground');
-        debugger;
+        
         // while (list.lastChild) {
         //     list.removeChild(list.lastChild);
         // }
@@ -16,14 +18,14 @@ const buttonResult = () => {
         //     testing.removeChild(testing.firstElementChild);
         // }
         const newCanvas =
-            `
-        <div class="container">
-            <canvas id="myChart"></canvas>
-        </div>
+        `
+            <div class="container">
+                <canvas id="myChart"></canvas>
+            </div>
         `;
         document.getElementById('testing-ground')
             .insertAdjacentHTML("afterbegin", newCanvas);
-        debugger;
+        
         fetchAddedData(2016);
         // location.reload();
     });
@@ -35,7 +37,7 @@ const buttonResult = () => {
         // let list = document.getElementById('games-list')
         // list.innerHTML = "";
         let testing = document.getElementById('testing-ground');
-        debugger;
+        
         while (testing.lastChild) {
             testing.removeChild(testing.lastChild);
         }
@@ -44,13 +46,13 @@ const buttonResult = () => {
         // }
         const newCanvas = 
         `
-        <div class="container">
-            <canvas id="myChart"></canvas>
-        </div>
+            <div class="container">
+                <canvas id="myChart"></canvas>
+            </div>
         `;
         document.getElementById('testing-ground')
             .insertAdjacentHTML("afterbegin", newCanvas);
-        debugger;
+        
         fetchMetacriticData(2016);
     });
 

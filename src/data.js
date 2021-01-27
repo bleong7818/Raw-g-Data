@@ -9,7 +9,7 @@ export const fetchAddedData = (number) => {
         })
         .then(data => {
             console.log(data);
-            const half = data.results.splice(15, 19);
+            const half = data.results.splice(10, 19);
             // debugger
             let numbersArray = [];
             data.results.forEach(game => {
@@ -81,8 +81,8 @@ export const fetchMetacriticData = (number) => {
             }
             return res.json();
         }).then(data => {
-            let half = data.results.splice(15, 19);
-            
+            let half = data.results.splice(10, 19);
+            debugger;
             let sorted = data.results.sort((a, b) => {
                     return (a.metacritic < b.metacritic) ? 1 : -1;
             });
