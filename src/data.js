@@ -36,14 +36,13 @@ export const fetchAddedData = (number) => {
             });
             const games = 
             `
-                <script>
-                    ${massPopChart}
-                </script>
+            <script class="chart">
+                ${massPopChart}
+            </script>
             `;
-           
             document.getElementById('testing-ground')
                 .insertAdjacentHTML("afterbegin", games);
-        }).catch(err => {
+            }).catch(err => {
             console.log(err);
         });
         // .then(data => {
@@ -82,14 +81,11 @@ export const fetchMetacriticData = (number) => {
             return res.json();
         }).then(data => {
             let half = data.results.splice(15, 19);
-            // debugger;
-            // const sorted 
-            // debugger;
-            // if (truth) {
+            
             let sorted = data.results.sort((a, b) => {
                     return (a.metacritic < b.metacritic) ? 1 : -1;
             });
-            // debugger;
+            
             let namesArray = []; 
             sorted.forEach(game => {
                 namesArray.push(game.name);
@@ -98,7 +94,7 @@ export const fetchMetacriticData = (number) => {
             sorted.forEach(game => {
                 scoresArray.push(game.metacritic);
             });
-            // debugger;
+           
             let myChart = document.getElementById('myChart').getContext('2d');
             let massPopChart = new Chart(myChart, {
                 type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
@@ -115,11 +111,10 @@ export const fetchMetacriticData = (number) => {
             });
             const games =
                 `
-                <script>
+                <script class="chart">
                     ${massPopChart}
                 </script>
-            `;
-
+                `;
             document.getElementById('testing-ground')
                 .insertAdjacentHTML("afterbegin", games);
         }).catch(err => {
