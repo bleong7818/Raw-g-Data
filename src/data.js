@@ -41,7 +41,7 @@ export const fetchAddedData = (number) => {
                 </script>
                 
             `;
-            document.getElementById('testing-ground')
+            document.getElementById('chart')
                 .insertAdjacentHTML("afterbegin", games);
             }).catch(err => {
             console.log(err);
@@ -117,7 +117,7 @@ export const fetchMetacriticData = (number) => {
                     </script>
 
                 `;
-            document.getElementById('testing-ground')
+            document.getElementById('chart')
                 .insertAdjacentHTML("afterbegin", games);
         }).catch(err => {
             console.log(err);

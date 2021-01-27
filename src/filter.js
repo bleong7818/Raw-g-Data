@@ -3,10 +3,11 @@ import { fetchAddedData, fetchMetacriticData } from './data';
 const buttonResult = () => {
     const popularity = document.getElementById("popularity");
     popularity.addEventListener("click", e => {
-        let slider = document.getElementsByClassName('range-input');
+        let slider = document.getElementById('slider-input');
+        const sliderValue = parseFloat(slider.value);
         debugger;
         // let list = document.getElementById("games-list");
-        let testing = document.getElementById('testing-ground');
+        let testing = document.getElementById('chart');
         
         // while (list.lastChild) {
         //     list.removeChild(list.lastChild);
@@ -23,20 +24,19 @@ const buttonResult = () => {
                 <canvas id="myChart"></canvas>
             </div>
         `;
-        document.getElementById('testing-ground')
+        document.getElementById('chart')
             .insertAdjacentHTML("afterbegin", newCanvas);
         
-        fetchAddedData(2016);
+        fetchAddedData(sliderValue);
         // location.reload();
     });
 
     const critical = document.getElementById("metacritic");
     critical.addEventListener("click", e => {
-        // location.reload();
-        // debugger;
-        // let list = document.getElementById('games-list')
-        // list.innerHTML = "";
-        let testing = document.getElementById('testing-ground');
+        
+        let slider = document.getElementById('slider-input');
+        const sliderValue = parseFloat(slider.value);
+        let testing = document.getElementById('chart');
         
         while (testing.lastChild) {
             testing.removeChild(testing.lastChild);
@@ -50,10 +50,10 @@ const buttonResult = () => {
                 <canvas id="myChart"></canvas>
             </div>
         `;
-        document.getElementById('testing-ground')
+        document.getElementById('chart')
             .insertAdjacentHTML("afterbegin", newCanvas);
         
-        fetchMetacriticData(2016);
+        fetchMetacriticData(sliderValue);
     });
 
 };
