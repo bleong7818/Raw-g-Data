@@ -52,6 +52,22 @@
     justify-content: center;
 }
 
+#popularity {
+    width: 25%;
+    height: 25%;
+    border-radius: 6px;
+    outline: none;
+}
+
+#popularity:hover {
+    background-color: lightgray;
+    transition: 0.5s;
+}
+
+#popularity:focus {
+    outline: none;
+}
+
 /* #slider {
     -webkit-appearance: none;
     width: 100%;

@@ -82,20 +82,24 @@ export const fetchMetacriticData = (number) => {
             return res.json();
         }).then(data => {
             let half = data.results.splice(10, 19);
-            debugger;
+            
             let sorted = data.results.sort((a, b) => {
                     return (a.metacritic < b.metacritic) ? 1 : -1;
             });
             
             let namesArray = []; 
             sorted.forEach(game => {
-                namesArray.push(game.name);
+                if (game.metacritic) {
+                    namesArray.push(game.name);
+                }
             });
             let scoresArray = [];
             sorted.forEach(game => {
+                if (game.metacritic) {
                 scoresArray.push(game.metacritic);
+                }
             });
-           
+            debugger;
             let myChart = document.getElementById('myChart').getContext('2d');
             let massPopChart = new Chart(myChart, {
                 type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
