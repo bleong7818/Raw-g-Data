@@ -36,9 +36,10 @@ export const fetchAddedData = (number) => {
             });
             const games = 
             `
-            <script class="chart">
-                ${massPopChart}
-            </script>
+                <script class="chart">
+                    ${massPopChart}
+                </script>
+                
             `;
             document.getElementById('testing-ground')
                 .insertAdjacentHTML("afterbegin", games);
@@ -111,9 +112,10 @@ export const fetchMetacriticData = (number) => {
             });
             const games =
                 `
-                <script class="chart">
-                    ${massPopChart}
-                </script>
+                    <script class="chart">
+                        ${massPopChart}
+                    </script>
+
                 `;
             document.getElementById('testing-ground')
                 .insertAdjacentHTML("afterbegin", games);
