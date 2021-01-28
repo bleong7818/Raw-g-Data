@@ -19,10 +19,11 @@
         <h1 class="cover-words">Raw(g) Data </h1>
         <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io (slider will allow user to pick the year for the list of games.)</h1>
         <div class="range-input">
-                <input id="slider-input" type="range" min="2010" max="2020" value="2010" step="1">
-                <div class="value">
-                    <div></div>
-                </div>
+            <input id="slider-input" type="range" min="2010" max="2020" value="2010" step="1" oninput="this.nextElementSibling.value = this.value">
+            <output>2010</output>
+            <!-- <div class="value">
+                <div></div>
+            </div> -->
         </div>
         <div class="filter-buttons">
             <button id="popularity">Filter by Popularity</button>

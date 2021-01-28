@@ -18,6 +18,12 @@
     padding: 20px;
 }
 
+.range-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #games-list {
     display: flex;
     justify-content: center;
@@ -52,20 +58,51 @@
     justify-content: center;
 }
 
+.filter-buttons {
+    left: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
 #popularity {
+    font-size: 16px;
+    font-family: sans-serif;
     width: 25%;
-    height: 25%;
     border-radius: 6px;
     outline: none;
+    border: none;
+    transition: 0.3s;
 }
 
 #popularity:hover {
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    opacity: 60%;
     transition: 0.5s;
 }
 
 #popularity:focus {
     outline: none;
+}
+
+#metacritic {
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 25%;
+    border-radius: 6px;
+    outline: none;
+    border: none; 
+    transition: 0.3s;
+}
+
+#metacritic:focus {
+    outline: none
+}
+
+#metacritic:hover {
+    opacity: 60%;
+    transition: 0.5s;
 }
 
 /* #slider {
@@ -110,13 +147,6 @@
     position: absolute;
     bottom: 0;
 } */
-
-.filter-buttons {
-    left: 50%;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
 
 
 /* .testing {
