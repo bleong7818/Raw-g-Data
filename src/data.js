@@ -26,13 +26,26 @@ export const fetchAddedData = (number) => {
                 data: {
                     labels: nameArray,
                     datasets: [{
-                        label: 'Popularity in terms of users',
+                        label: 'User Downloads',
                         data: numbersArray,
                         backgroundColor: ['white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
-                            'white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',], 
+                            'white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
+                        ],
+                        hoverBorderWidth: 2,
+                        hoverBorderColor: '#151515' 
                     }]
                 },
-                options: {}
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Games Ordered by Number of User Downloads',
+                        fontSize: 26,
+                        fontColor:'White'
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
             });
             const games = 
             `
@@ -108,14 +121,28 @@ export const fetchMetacriticData = (number) => {
                         label: 'Metacritic Score',
                         data: scoresArray,
                         backgroundColor: ['white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
-                            'white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',],
+                            'white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
+                        ],
+                        hoverBorderWidth:2,
+                        hoverBorderColor:'#151515'
                     }]
                 },
-                options: {}
+                options: {
+                    title: {
+                        display:true,
+                        text:'Games Ordered by Aggregate Critical Score',
+                        fontSize: 26,
+                        fontColor: 'White'
+                    },
+                    legend: {
+                        display:false
+                    }
+                }
             });
             const games =
                 `
                     <script class="chart">
+                        
                         ${massPopChart}
                     </script>
 

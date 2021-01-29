@@ -18,15 +18,21 @@
 <div class="entire-page">
     <body class="game-data">
         <h1 class="cover-words">Raw(g) Data </h1>
-        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io (slider will allow user to pick the year for the list of games.)</h1>
+        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io.</h1>
         <div class="range-input">
-            <output class="slider-value">2015</output>
-            <input id="slider-input" type="range" min="2010" max="2020" value="2015" step="1" oninput="this.previousElementSibling.value = this.value">
+            <output class="slider-value">2010</output>
+            <input id="slider-input" type="range" min="2000" max="2020" value="2010" step="1" oninput="this.previousElementSibling.value = this.value">
         </div>
         <div class="filter-buttons">
             <button id="popularity">Filter by Popularity</button>
             <button id="metacritic">Filter by Metacritic Score</button>
         </div>
+        <script>
+            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontFamily = 'Lato';
+            Chart.defaults.global.defaultFontColor = '#808080';
+            // Chart.defaults.global.defaultFontFamily = sans - serif;
+        </script>
         <div id="chart">
             <div class="container">
                 <canvas id="myChart"></canvas>

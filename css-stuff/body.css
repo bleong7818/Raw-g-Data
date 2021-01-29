@@ -24,14 +24,13 @@
     flex-direction: column;
 }
 
-.range-input:hover {
+/* .range-input:hover {
     opacity: 1;
-}
-
+} */
 
 .slider-value {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 40px;
     font-family: sans-serif;
     padding: 20px;
     color: #ffffff;
@@ -81,16 +80,15 @@
 
 #popularity {
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 25%;
-    border-radius: 6px;
+    border-radius: 15px;
     outline: none;
     border: none;
     transition: 0.3s;
 }
 
 #popularity:hover {
-    /* background-color: lightgray; */
     opacity: 60%;
     transition: 0.5s;
 }
@@ -101,9 +99,9 @@
 
 #metacritic {
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 25%;
-    border-radius: 6px;
+    border-radius: 15px;
     outline: none;
     border: none; 
     transition: 0.3s;

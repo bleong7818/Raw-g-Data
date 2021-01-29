@@ -35,8 +35,15 @@
 } */
 
 #slider-input::-webkit-slider-runnable-track {
+    transition: 0.3s;
     background-color: white;
     border-radius: 10px;
+}
+
+#slider-input::-webkit-slider-runnable-track:hover {
+    transition: 0.5s;
+    background-color: rgb(148, 148, 148);
+    /* opacity: 1; */
 }
 
 #slider-input::-webkit-slider-thumb {
