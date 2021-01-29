@@ -1,19 +1,25 @@
 import { fetchAddedData, fetchMetacriticData } from './data';
+import initialFetch from './initial_fetch';
 
-const buttonResult = () => {
+const buttonResult = (year) => {
+    // console.log(data);
+
+    // let results = initialFetch(year);
+    // debugger;
     const popularity = document.getElementById("popularity");
     popularity.addEventListener("click", e => {
+        // console.log(results);
+        // debugger;
         let slider = document.getElementById('slider-input');
         const sliderValue = parseFloat(slider.value);
-        debugger;
         // let list = document.getElementById("games-list");
-        let testing = document.getElementById('chart');
+        let chart = document.getElementById('chart');
         
         // while (list.lastChild) {
         //     list.removeChild(list.lastChild);
         // }
-        while (testing.lastChild) {
-            testing.removeChild(testing.lastChild);
+        while (chart.lastChild) {
+            chart.removeChild(chart.lastChild);
         }
         // if (testing.childElementCount !== 1) {
         //     testing.removeChild(testing.firstElementChild);
@@ -36,10 +42,10 @@ const buttonResult = () => {
         
         let slider = document.getElementById('slider-input');
         const sliderValue = parseFloat(slider.value);
-        let testing = document.getElementById('chart');
+        let chart = document.getElementById('chart');
         
-        while (testing.lastChild) {
-            testing.removeChild(testing.lastChild);
+        while (chart.lastChild) {
+            chart.removeChild(chart.lastChild);
         }
         // if (testing.childElementCount !== 1) {
         //     testing.removeChild(testing.firstElementChild);

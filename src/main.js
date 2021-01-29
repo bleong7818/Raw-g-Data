@@ -1,11 +1,14 @@
 import { fetchAddedData, fetchMetacriticData } from './data';
 import buttonResult from './filter';
 import { renderSlider } from './slider';
-import { initialFetch } from './initial_fetch';
+import initialFetch from './initial_fetch';
 
 // debugger;
 document.addEventListener("DOMContentLoaded", () => {
-    // let allData = initialFetch();
+    let slider = document.getElementById('slider-input');
+    const sliderValue = parseFloat(slider.value);
+    // console.log(sliderValue);
+    // let data = initialFetch(sliderValue);
     // console.log(allData);
-    buttonResult();
+    buttonResult(sliderValue);
 });
