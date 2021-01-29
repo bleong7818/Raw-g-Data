@@ -15,9 +15,9 @@ function fetchData() {
     fetch("https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=2010-01-01,2010-12-31&ordering=-added/")
     .then(res => {
         if (!res.ok) {
-            throw Error("ERROR")
+            throw Error("ERROR");
         }
-       return res.json()
+       return res.json();
     }).then(data => {
         // console.log(data)
         // const half = data.results.splice(10, 19);
@@ -42,11 +42,11 @@ function fetchData() {
         // debugger;
         // console.log(data)
         document.getElementById('app')
-        .insertAdjacentHTML("afterbegin", games)
+        .insertAdjacentHTML("afterbegin", games);
     }).catch(err => {
-        console.log(err)
-    })
+        console.log(err);
+    });
 }
 {/* <p> <img src="${game.background_image}" alt= ${game.name} /> </p> */}
 {/* <p> Name: ${game.name}, added by ${game.added} users, score: ${game.metacritic} </p> */}
-fetchData()
+fetchData();

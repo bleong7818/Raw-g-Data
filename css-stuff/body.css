@@ -1,7 +1,7 @@
 .cover-words {
     display: flex;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 54px;
     color: #ffffff;
     font-weight: 700;
@@ -11,14 +11,36 @@
 .cover-description {
     display: flex;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     color: #ffffff;
     font-weight: 700;
     padding: 20px;
 }
 
-#games-list {
+.range-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.range-input:hover {
+    opacity: 1;
+}
+
+
+.slider-value {
+    font-weight: 700;
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.slider-value:hover {
+    opacity: 1;
+}
+/* #games-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -27,10 +49,9 @@
 .game {
     padding-top: 35px;
     color: #ffffff;
-}
+} */
 
 .game-data {
-    /* position: relative; */
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -43,15 +64,61 @@
     justify-content: center;
 }
 
-.slide-main {
+/* .slide-main {
     width: 40%;
-
     position: relative;
     display: flex;
     justify-content: center;
+} */
+
+.filter-buttons {
+    left: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-#slider {
+#popularity {
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 25%;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+
+#popularity:hover {
+    /* background-color: lightgray; */
+    opacity: 60%;
+    transition: 0.5s;
+}
+
+#popularity:focus {
+    outline: none;
+}
+
+#metacritic {
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 25%;
+    border-radius: 6px;
+    outline: none;
+    border: none; 
+    transition: 0.3s;
+}
+
+#metacritic:focus {
+    outline: none
+}
+
+#metacritic:hover {
+    opacity: 60%;
+    transition: 0.5s;
+}
+
+/* #slider {
     -webkit-appearance: none;
     width: 100%;
     height: 7px;
@@ -92,14 +159,7 @@
     border-radius: 50%;
     position: absolute;
     bottom: 0;
-}
-
-.filter-buttons {
-    left: 50%;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
+} */
 
 
 /* .testing {
