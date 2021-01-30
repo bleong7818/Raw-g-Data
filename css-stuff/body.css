@@ -18,6 +18,16 @@
     padding: 20px;
 }
 
+.cover-info {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px;
+}
+
 .range-input {
     display: flex;
     align-items: center;

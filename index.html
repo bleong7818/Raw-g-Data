@@ -18,7 +18,11 @@
 <div class="entire-page">
     <body class="game-data">
         <h1 class="cover-words">Raw(g) Data </h1>
-        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io.</h1>
+        <h1 class="cover-description">A visualization of game popularity data and critical review data from Rawg.io and Metacritic.
+        </h1>
+        <h2 class="cover-info">Rawg.io is a gaming social media site where users can talk about and rate video 
+        games they have played. Metacritic is an aggregate review website where reviewers can post their 
+        review scores for a game and contribute to the total average review score for a game.</h2>
         <div class="range-input">
             <output class="slider-value">2010</output>
             <input id="slider-input" type="range" min="2000" max="2020" value="2010" step="1" oninput="this.previousElementSibling.value = this.value">
@@ -28,7 +32,7 @@
             <button id="metacritic">Filter by Metacritic Score</button>
         </div>
         <script>
-            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontSize = 16;
             Chart.defaults.global.defaultFontFamily = 'Lato';
             Chart.defaults.global.defaultFontColor = '#808080';
             // Chart.defaults.global.defaultFontFamily = sans - serif;

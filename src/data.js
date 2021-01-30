@@ -8,7 +8,6 @@ export const fetchAddedData = (number) => {
             return res.json();
         })
         .then(data => {
-            console.log(data);
             const half = data.results.splice(10, 19);
             // debugger
             let numbersArray = [];
@@ -38,7 +37,7 @@ export const fetchAddedData = (number) => {
                 options: {
                     title: {
                         display: true,
-                        text: 'Games Ordered by Number of User Downloads',
+                        text: number + ' Games Ordered by Number of User Downloads',
                         fontSize: 26,
                         fontColor:'White'
                     },
@@ -130,7 +129,7 @@ export const fetchMetacriticData = (number) => {
                 options: {
                     title: {
                         display:true,
-                        text:'Games Ordered by Aggregate Critical Score',
+                        text: number + ' Games Ordered by Aggregate Critical Score',
                         fontSize: 26,
                         fontColor: 'White'
                     },
@@ -142,7 +141,6 @@ export const fetchMetacriticData = (number) => {
             const games =
                 `
                     <script class="chart">
-                        
                         ${massPopChart}
                     </script>
 
