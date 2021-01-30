@@ -37,7 +37,7 @@ export const fetchAddedData = (number) => {
                 options: {
                     title: {
                         display: true,
-                        text: number + ' Games Ordered by Number of User Downloads',
+                        text: 'Top ' + number + ' Games Ordered by Number of Rawg.io User Downloads',
                         fontSize: 26,
                         fontColor:'White'
                     },
@@ -129,7 +129,7 @@ export const fetchMetacriticData = (number) => {
                 options: {
                     title: {
                         display:true,
-                        text: number + ' Games Ordered by Aggregate Critical Score',
+                        text: 'Top ' + number + ' Games Ordered by Aggregate Critical Score',
                         fontSize: 26,
                         fontColor: 'White'
                     },
