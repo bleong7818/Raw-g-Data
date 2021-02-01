@@ -23,7 +23,7 @@ Chart.js Version: 2.9.4
 Challenging Features
 =============
 
-#API Fetch
+API Fetch
 
 This project was the first time that I had ever fetched data from an API, so I spent a good deal of time researching how to not only fetch that data but also how to get the specific data that I wanted. I realized that I wanted two different sets of data, popularity data and critical review data, to make the two charts. As such, I created two different functions that would trigger upon the user clicking either the "Filter by Popularity" or "Filter by Metacritic" buttons respectively. I then sorted the data depending on which button was pressed and put the names of the games into one array and the actual game data into a seperate array. By the end of the project I had learned how to fetch data reliably and manipulate/sort it based on my specific needs.
 
@@ -57,7 +57,7 @@ This project was the first time that I had ever fetched data from an API, so I s
                 }
             });
          
-#Chart.js and how to delete previous charts.
+Chart.js and Making the First Chart
 
 This project was also the first time I used Chart.js, which thankfully was pretty simple to pick up and learn. I was able to create my first chart with dummy data pretty easily, but then I ran into the problem of creating a chart using data that I had fetched from the api. The demos I had seen had created charts in the html, but my data was stuck in a javascript file, so I could not use variables in the html to create the chart. Furthermore, Chart.js requires the use of a canvas element wrapped in a container element that is adjacent to the actual script element containing the chart data, and the container element has to be in the html. This meant that I could not simply append the container element and the accompanying script element to the html at the same time, as the script file would fail to do anything without the container element being present first. Eventually I worked out a solution where I hard coded in a container element into the html and then appended the script element from the javascript file where the data was located. That way I could fulfill the condition of the container element being present first while also utilizing the data from the javascript file by putting it in the script element.
 
@@ -108,7 +108,7 @@ This project was also the first time I used Chart.js, which thankfully was prett
             document.getElementById('chart')
                 .insertAdjacentHTML("afterbegin", games);
 
-#How to Delete Previous Charts
+How to Delete Previous Charts
 
 The above method worked for creating a chart for the first click, but due to the fact that the container element was hard coded in I then had the issue of subsequent charts being piled on top of the previous chart, which resulted in multiple charts being displayed at the same time. Initially I tried deleting the script elements themselves, but that left the old container element behind, which resulted in strange behavior where the old chart would occasionally pop into existence behind the old one if I hovered over the left side of the new chart. Eventually I settled on a solution where I would delete both the container element and the script tag before adding back a new container element before adding in the new script tag. That way I could both delete the old chart entirely while fulfilling the condition of the container element needing to be present before appending the script tag.
 
