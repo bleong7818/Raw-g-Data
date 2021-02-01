@@ -9,7 +9,7 @@ export const fetchAddedData = (number) => {
         })
         .then(data => {
             const half = data.results.splice(10, 19);
-            // debugger
+            // 
             let numbersArray = [];
             data.results.forEach(game => {
                numbersArray.push(game.added);
@@ -18,7 +18,7 @@ export const fetchAddedData = (number) => {
             data.results.forEach(game => {
                 nameArray.push(game.name);
             });
-            // debugger;
+            // ;
             let myChart = document.getElementById('myChart').getContext('2d');
             let massPopChart = new Chart(myChart, {
                 type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
@@ -62,10 +62,10 @@ export const fetchAddedData = (number) => {
             
         //     console.log(data);
         //     const half = data.results.splice(15, 19);
-        //     // debugger
+        //     // 
         //     resultsArray = [];
         //     data.results.forEach(game => {
-        //     // debugger
+        //     // 
         //        resultsArray.push(game.added);
         //     });
         //     // console.log(resultsArray);

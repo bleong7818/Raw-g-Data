@@ -6,7 +6,7 @@ const initialFetch = (year) => {
             }
             return res.json();
         }).then(data => {
-            // debugger
+            // 
             return data;
         }).catch(err => {
             console.log(err);

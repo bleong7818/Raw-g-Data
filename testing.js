@@ -21,13 +21,13 @@ function fetchData() {
     }).then(data => {
         // console.log(data)
         // const half = data.results.splice(10, 19);
-        // debugger;
+        // ;
         // const sorted 
         
         // const sorted = data.results.sort((a, b) => {
         //     return (a.metacritic < b.metacritic) ? 1 : -1
         // })
-        // debugger;
+        // ;
         // console.log(sorted);
         // console.log(data.results)
         const games = data.results.map(game => {
@@ -39,7 +39,7 @@ function fetchData() {
             `
         }).join('')
         // console.log(games)
-        // debugger;
+        // ;
         // console.log(data)
         document.getElementById('app')
         .insertAdjacentHTML("afterbegin", games);
