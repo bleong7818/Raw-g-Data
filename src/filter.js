@@ -9,7 +9,7 @@ const buttonResult = (year) => {
         const sliderValue = parseFloat(slider.value);
 
         let chart = document.getElementById('chart');
-        
+        // debugger
         while (chart.lastChild) {
             chart.removeChild(chart.lastChild);
         }

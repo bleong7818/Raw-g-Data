@@ -28,7 +28,7 @@
             </a>
             <h1 class="cover-words">Raw(g) Data</h1>
             <a class="linkedin-logo" target="_blank" href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
-                <img  src=images/linkedin.svg alt="" />
+                <img className="github-logo" src=images/linkedin.svg alt="" />
             </a>
         </div>
         <h1 class="cover-description">A visualization of game popularity data and critical review data from <span class="rawg-trigger">Rawg.io</span>
@@ -57,6 +57,69 @@
             <div class="container">
                 <canvas id="myChart"></canvas>
             </div>
+            <script>
+                let myChart = document.getElementById('myChart').getContext('2d')
+                let massPopChart = new Chart(myChart, {
+                    type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
+                    data: {
+                        labels: ["Limbo", "Metro 2033", "BioShock 2",
+                            "Amnesia: The Dark Descent", "Alan Wake", "Super Meat Boy",
+                            "Sid Meier's Civilization V", "Mass Effect 2", "Fallout: New Vegas", "Just Cause 2"],
+                        datasets: [{
+                            label: 'User Downloads',
+                            data: [9449, 7495, 7179, 6948, 6886, 6770, 6660, 6516, 5925, 5808],
+                            backgroundColor: ['white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 
+                            'gray','white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
+                            ],
+                            hoverBorderWidth: 2,
+                            hoverBorderColor: '#151515' 
+                            // backgroundImage:['https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png'],
+                        }]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Top 2010 Games Ordered by Number of Rawg.io User Downloads',
+                            fontSize: 26,
+                            fontColor: 'White'
+                        },
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+            </script>
+            <!-- <script>
+            let myChart = document.getElementById('myChart').getContext('2d');
+            let massPopChart = new Chart(myChart, {
+                    type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
+                    data: {
+                        labels: ["Limbo", "Metro 2033", "BioShock 2", 
+                        "Amnesia: The Dark Descent", "Alan Wake", "Super Meat Boy", 
+                        "Sid Meier's Civilization V", "Mass Effect 2", "Fallout: New Vegas", "Just Cause 2"],
+                        datasets: [{
+                            label: 'User Downloads',
+                            data: [9449, 7495, 7179, 6948, 6886, 6770, 6660, 6516, 5925, 5808],
+                            backgroundColor: ['white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
+                                'white', 'gray', 'white', 'gray', 'white', 'gray', 'white', 'gray',
+                            ],
+                            hoverBorderWidth: 2,
+                            hoverBorderColor: '#151515'
+                        }]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Top ' + number + ' Games Ordered by Number of Rawg.io User Downloads',
+                            fontSize: 26,
+                            fontColor: 'White'
+                        },
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+        </script> -->
         </div>
     </body>
 </div>

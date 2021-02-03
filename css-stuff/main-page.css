@@ -9,6 +9,16 @@
     /* width: 50%; */
 }
 
+.cover-words {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 54px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px;
+}
+
 .github-link {
     width: 50px;
     height: 50px;
@@ -25,13 +35,14 @@
 .linkedin-logo {
     width: 50px;
     height: 50px;
-    color: white;
-    filter: none;
+    filter: invert(1);
+    /* filter: invert(33%) sepia(8%) saturate(726%) hue-rotate(244deg) brightness(90%) contrast(87%); */
     transition: all 0.3s ease;
 }
 
 .linkedin-logo:hover {
-    width: 45px;
-    height: 45px;
-    transition: 0.4s;
+    width: 48px;
+    height: 48px;
+    filter: invert(0.8);
+    transition: 0.2s;
 }
