@@ -1,4 +1,37 @@
 .entire-page {
     background-color: #151515;
+}
 
+.top-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 50%; */
+}
+
+.github-link {
+    width: 50px;
+    height: 50px;
+}
+
+.github-logo {
+    width: 50px;
+    height: 50px;
+    filter: none;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.linkedin-logo {
+    width: 50px;
+    height: 50px;
+    color: white;
+    filter: none;
+    transition: all 0.3s ease;
+}
+
+.linkedin-logo:hover {
+    width: 45px;
+    height: 45px;
+    transition: 0.4s;
 }

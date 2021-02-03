@@ -14,10 +14,23 @@
     <link rel="stylesheet" href="css-stuff/slider.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
+    <script>
+        window.github = "<%= image_url('github-square.svg') %>";
+        window.linkedin = "<%= image_url('linkedin.svg') %>";
+    </script>
 </head>
 <div class="entire-page">
     <body class="game-data">
-        <h1 class="cover-words">Raw(g) Data </h1>
+        <div class="top-list">
+            <a class="linkedin-logo" target="_blank" href="https://github.com/bleong7818">
+                <img className="github-logo" src="images/github-square.svg" alt="" />
+            </a>
+            <h1 class="cover-words">Raw(g) Data</h1>
+            <a class="linkedin-logo" target="_blank" href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
+                <img  src=images/linkedin.svg alt="" />
+            </a>
+        </div>
         <h1 class="cover-description">A visualization of game popularity data and critical review data from <span class="rawg-trigger">Rawg.io</span>
              and <span class="metacritic-trigger"> Metacritic.</span>
         </h1>
@@ -39,7 +52,6 @@
             Chart.defaults.global.defaultFontSize = 16;
             Chart.defaults.global.defaultFontFamily = 'Lato';
             Chart.defaults.global.defaultFontColor = '#808080';
-            // Chart.defaults.global.defaultFontFamily = sans - serif;
         </script>
         <div id="chart">
             <div class="container">
