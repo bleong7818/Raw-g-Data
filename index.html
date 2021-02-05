@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css-stuff/body.css" type="text/css">
     <link rel="stylesheet" href="css-stuff/main-page.css" type="text/css">
     <link rel="stylesheet" href="css-stuff/slider.css" type="text/css">
+    <link rel="stylesheet" href="css-stuff/modal.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
@@ -31,14 +32,12 @@
                 <img className="github-logo" src=images/linkedin.svg alt="" />
             </a>
         </div>
-        <h1 class="cover-description">A visualization of game popularity data and critical review data from <span class="rawg-trigger">Rawg.io</span>
-             and <span class="metacritic-trigger"> Metacritic.</span>
+        <h1 class="cover-description">A visualization of game popularity data and critical review data from <span id="rawg-trigger">Rawg.io</span>
+             and <span id="metacritic-trigger"> Metacritic.</span>
         </h1>
-        <!-- <h1>A visualization of game popularity data and critical review data from <span>Rawg.io</span> and<span
-        > Metacritic</span> </h1> -->
-        <h2 class="rawg-info"> Rawg.io is a gaming social media site where users can talk about and rate video 
+        <h2 id="rawg-info"> Rawg.io is a gaming social media site where users can talk about and rate video 
         games they have played.</h2>
-        <h2 class="metacritic-info">Metacritic is an aggregate review website where reviewers can post their
+        <h2 id="metacritic-info">Metacritic is an aggregate review website where reviewers can post their
         review scores for a game and contribute to the total average review score for a game.</h2>
         <div class="range-input">
             <output class="slider-value">2010</output>
@@ -81,7 +80,8 @@
                             display: true,
                             text: 'Top 2010 Games Ordered by Number of Rawg.io User Downloads',
                             fontSize: 26,
-                            fontColor: 'White'
+                            fontColor: 'White',
+                            fontFamily: 'Open Sans'
                         },
                         legend: {
                             display: false

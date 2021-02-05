@@ -37,7 +37,7 @@
     height: 50px;
     filter: invert(1);
     /* filter: invert(33%) sepia(8%) saturate(726%) hue-rotate(244deg) brightness(90%) contrast(87%); */
-    transition: all 0.3s ease;
+    transition: 0.2s;
 }
 
 .linkedin-logo:hover {
