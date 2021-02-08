@@ -1,24 +1,28 @@
 const modalFunction = () => {
+    var question = document.getElementById("question-mark");
     var rawg = document.getElementById("rawg-trigger");
     var rawgInfo = document.getElementById("rawg-info");
-    rawg.onmouseover = function () {
-        rawgInfo.style.display = "block";
-    };
-
-    rawg.onmouseleave = function () {
-        rawgInfo.style.display = "none";
-    };
-
     var metacritic = document.getElementById("metacritic-trigger");
     var metacriticInfo = document.getElementById("metacritic-info");
 
-    metacritic.onmouseover = function () {
-        metacriticInfo.style.display = "block";
+    question.onmouseover = function () {
+        rawgInfo.style.display = "flex";
+        metacriticInfo.style.display = "flex";
     };
 
-    metacritic.onmouseleave = function () {
+    question.onmouseleave = function () {
+        rawgInfo.style.display = "none";
         metacriticInfo.style.display = "none";
     };
+
+
+    // question.onmouseover = function () {
+    //     metacriticInfo.style.display = "flex";
+    // };
+
+    // question.onmouseleave = function () {
+    //     metacriticInfo.style.display = "none";
+    // };
 
 };
 
