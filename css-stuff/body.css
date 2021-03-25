@@ -9,13 +9,19 @@
 }
 
 .cover-description {
-    /* display: flex; */
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     color: #ffffff;
     font-weight: 700;
     padding: 20px;
+}
+
+.page-instructions {
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
 }
 
 .cover-info {
