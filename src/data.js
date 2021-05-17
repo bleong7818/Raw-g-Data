@@ -123,55 +123,5 @@ export const fetchMetacriticData = (number) => {
                 .insertAdjacentHTML("afterbegin", games);
         }).catch(err => {
             console.log(err);
-            // let scoresArray = [];
-            // sorted.results.forEach(game => {
-            //     scoresArray.push(game.metacritic);
-            // });
-
-        //     let nineties = data.results.filter(game => game.metacritic >= 90);
-        //     let eighties = data.results.filter(game => game.metacritic >= 80 && game.metacritic < 90);
-        //     let seventies = data.results.filter(game => game.metacritic >= 70 && game.metacritic < 80);
-
-        //     const ninetiesGames = nineties.map(game => {
-        //         return `
-        //     <li class="nineties-game">
-        //         <p> <img class="nineties-image" src="${game.background_image}" alt=${game.name}/> </p>
-        //         <p class="nineties-title">${game.name}</p>
-        //         <p class="nineties-title"> Metacritic score: ${game.metacritic} </p>
-        //     </li>
-        //     `
-        //     }).join('');
-
-        //     const eightiesGames = eighties.map(game => {
-        //         return `
-        //     <li class="eighties-game" >
-        //         <p> <img class="eighties-image" src="${game.background_image}" alt=${game.name}/> </p>
-        //         <p class="eighties-title"> ${game.name} </p>
-        //         <p class="eighties-title"> Metacritic score: ${game.metacritic} </p>
-        //     </li>
-        //     `
-        //     }).join('');
-
-        //     const seventiesGames = seventies.map(game => {
-        //         return `
-        //     <li class="seventies-game" >
-        //         <p > <img class="seventies-image" src="${game.background_image}" alt=${game.name}/> </p>
-        //         <p class="seventies-title"> ${game.name} </p>
-        //         <p class="seventies-title"> Metacritic score: ${game.metacritic} </p>
-        //     </li>
-        //     `
-        //     }).join('');
-        //     document.getElementById('games-list')
-        //         .insertAdjacentHTML("afterbegin", seventiesGames);
-
-        //     document.getElementById('games-list')
-        //             .insertAdjacentHTML("afterbegin", eightiesGames);
-
-        //     document.getElementById('games-list')
-        //         .insertAdjacentHTML("afterbegin", ninetiesGames);
-        // }).catch(err => {
-        //     console.log(err);
         });
 };
-
-{/* <p> Name: ${game.name}, added by ${game.added} users, metacritic score: ${game.metacritic} </p> */}
