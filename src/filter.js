@@ -1,5 +1,5 @@
 import { fetchAddedData, fetchMetacriticData } from './data';
-import initialFetch from './initial_fetch';
+// import initialFetch from './initial_fetch';
 
 const buttonResult = (year) => {
     const popularity = document.getElementById("popularity");
@@ -9,7 +9,6 @@ const buttonResult = (year) => {
         const sliderValue = parseFloat(slider.value);
 
         let chart = document.getElementById('chart');
-        // debugger
         while (chart.lastChild) {
             chart.removeChild(chart.lastChild);
         }
