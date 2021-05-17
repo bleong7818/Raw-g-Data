@@ -18,8 +18,8 @@ export const fetchAddedData = (number) => {
             data.results.forEach(game => {
                 nameArray.push(game.name);
             });
-            debugger;
-            // ;
+            
+            
             let myChart = document.getElementById('myChart').getContext('2d');
             let massPopChart = new Chart(myChart, {
                 type: 'bar', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
