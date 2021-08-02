@@ -17,12 +17,6 @@
     padding: 20px;
 }
 
-.page-instructions {
-    justify-content: center;
-    padding: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
-}
 
 .cover-info {
     display: flex;
@@ -129,4 +123,11 @@
 #metacritic:hover {
     opacity: 60%;
     transition: 0.5s;
+}
+
+.page-instructions {
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
 }

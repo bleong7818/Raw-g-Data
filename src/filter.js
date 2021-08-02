@@ -22,7 +22,6 @@ const buttonResult = (year) => {
             .insertAdjacentHTML("afterbegin", newCanvas);
         
         fetchAddedData(sliderValue);
-        
     });
 
     const critical = document.getElementById("metacritic");

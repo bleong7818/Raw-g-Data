@@ -1,5 +1,4 @@
 export const fetchAddedData = (number) => {
-    
     fetch(`https://api.rawg.io/api/games?key=81183f5004fb4463843a06bde5573086&dates=${number}-01-01,${number}-12-31&ordering=-added/`)
         .then(res => {
             if (!res.ok) {
@@ -9,11 +8,10 @@ export const fetchAddedData = (number) => {
         })
         .then(data => {
             const half = data.results.splice(10, 19);
-            // 
             let numbersArray = [];
             data.results.forEach(game => {
                numbersArray.push(game.added);
-            });
+            })
             let nameArray = [];
             data.results.forEach(game => {
                 nameArray.push(game.name);
