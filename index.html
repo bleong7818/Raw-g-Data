@@ -24,7 +24,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
 
-    
+        <script>
+            (function (apiKey) {
+                (function (p, e, n, d, o) {
+                    var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
+                    v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                        o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+                    })(v[w]);
+                    y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                    z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
+                })(window, document, 'script', 'pendo');
+            })('3f1fc066-3ec9-460d-6a7b-c238a1fb5bf6');
+            // in your authentication promise handler or callback
+                pendo.initialize({
+                    visitor: {
+                        id: 'VISITOR-UNIQUE-ID'   // Required if user is logged in
+                        // email:        // Recommended if using Pendo Feedback, or NPS Email
+                        // full_name:    // Recommended if using Pendo Feedback
+                        // role:         // Optional
+
+                        // You can add any additional visitor level key-values here,
+                        // as long as it's not one of the above reserved names.
+                    },
+
+                    account: {
+                        id: 'ACCOUNT-UNIQUE-ID' // Required if using Pendo Feedback
+                        // name:         // Optional
+                        // is_paying:    // Recommended if using Pendo Feedback
+                        // monthly_value:// Recommended if using Pendo Feedback
+                        // planLevel:    // Optional
+                        // planPrice:    // Optional
+                        // creationDate: // Optional
+
+                        // You can add any additional account level key-values here,
+                        // as long as it's not one of the above reserved names.
+                    }
+                });
+        </script>
 </head>
 <div class="entire-page">
     <body class="game-data">
@@ -42,10 +78,10 @@
         </h1>
         <h2 id="rawg-info"> Rawg.io is a gaming social media site where users can discuss and rate video 
         games they have played.</h2>
-        <h3 id="metacritic-info">Metacritic is an aggregate review website where reviewers can post their
-        review scores for a game and contribute to the total average review score for a game.</h3>
         <h2 id="page-instructions">Use the slider above to select the year for the data and then click either of the buttons below to order the data by either
         popularity or critical score.</h2>
+        <h3 id="metacritic-info">Metacritic is an aggregate review website where reviewers can post their
+        review scores for a game and contribute to the total average review score for a game.</h3>
         <div class="range-input">
             <output class="slider-value">2010</output>
             <input id="slider-input" type="range" min="2000" max="2020" value="2010" step="1" oninput="this.previousElementSibling.value = this.value">
